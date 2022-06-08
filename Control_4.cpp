@@ -363,22 +363,17 @@ int main(int arhc, char *argv[])
 							// Initializing string which will be contain user's text
 							string text;
 
-							cout << "Enter text (Enter ... to terminate input): " << endl;
+							cout << "Enter text (Enter # to terminate input): " << endl;
 							cin.ignore();
-							getline(cin, text);
+							getline(cin, text, '#');
 
-							if (text == "...")
-								break;
-							else
-							{
-								// Initializing 'results' variable which contain results of counting symbols, words, sentences and paragraphs
-								string results(string_results(text));
-								// Printing table
-								print_table(text);
-								// Saving results into file
-								save_str_to_file(results);
-								break;
-							}
+							// Initializing 'results' variable which contain results of counting symbols, words, sentences and paragraphs
+							string results(string_results(text));
+							// Printing table
+							print_table(text);
+							// Saving results into file
+							save_str_to_file(results);
+							break;
 						}
 						{
 						case back:
