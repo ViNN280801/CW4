@@ -25,18 +25,6 @@ enum subMenu
 	back
 };
 
-void charCount(vector<string> &myFile, string &fileName)
-{
-	string str;
-	ifstream fin;
-	fin.open(fileName);
-	while (fin.peek() != EOF)
-	{
-		getline(fin, str);
-		cout << str << endl;
-	}
-}
-
 // Reads all content from file. Returns content as string
 string read_content_from_file(const string &filename)
 {
