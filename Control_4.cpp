@@ -3,7 +3,6 @@
 #include <limits>
 #include <string>
 #include <fstream>
-#include <vector>
 #include <algorithm>
 #include <iomanip>
 
